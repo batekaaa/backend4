@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Analytics Platform</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial; max-width: 1000px; margin: 30px auto; }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; }
+    input, select, button { padding: 8px; }
+    pre { background: #f4f4f4; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Time-series Analytics</h2>
+
+  <div class="row">
+    <select id="field">
+      <option value="field1">field1</option>
+      <option value="field2">field2</option>
+      <option value="field3">field3</option>
+    </select>
+
+    <input id="start" type="date" />
+    <input id="end" type="date" />
+
+    <button id="load">Load</button>
+  </div>
+
+  <canvas id="chart" height="120"></canvas>
+
+  <h3>Metrics</h3>
+  <pre id="metrics"></pre>
+
+  <script src="app.js"></script>
+</body>
+</html>
